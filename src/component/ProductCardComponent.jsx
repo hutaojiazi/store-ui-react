@@ -1,4 +1,14 @@
 import React, { Component } from 'react'
+import {
+  Alert,
+  Button,
+  Card,
+  CardBody,
+  CardHeader,
+  CardImg,
+  CardTitle
+} from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 class ProductCardComponent extends Component {
     constructor(props) {
@@ -14,21 +24,14 @@ class ProductCardComponent extends Component {
 
     render() {
         return (
-            <div class="card text-center">
-                <div class="card-header">
-                    <h4>iPhone12 256GB Gold</h4>
-                </div>
-                <div class="card-body">
-                    <a href="#"><img class="card-img-top" width="200px" height="150px" src="https://i.ibb.co/TrkY1By/iphone.jpg" alt=""/></a>
-                    <h5 class="card-title">$1399.99</h5>
-                    <div class="row">
-                        <div class="col-10 padding-0">
-                            <button class="btn btn-primary">Add To Cart
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <Card className="text-center">
+                <CardHeader tag="h4">iPhone12 256GB Gold</CardHeader>
+                <CardImg top width="200px" src="https://i.ibb.co/TrkY1By/iphone.jpg" alt="" />
+                <CardBody>
+                    <CardTitle tag="h5">$1399.99</CardTitle>
+                    <Button color="primary">Add To Cart</Button>
+                </CardBody>
+            </Card>
         )
     }
 }

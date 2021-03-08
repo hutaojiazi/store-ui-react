@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import MenuComponent from './MenuComponent';
+import NavBarComponent from './NavBarComponent';
 import ProductListComponent from './ProductListComponent';
 
 class StoreApp extends Component {
@@ -9,8 +9,9 @@ class StoreApp extends Component {
             <>
                 <Router>
                     <>
-                        <MenuComponent />
+                        <NavBarComponent />
                         <Switch>
+                            <Route path="/" exact component={ProductListComponent} />
                             <Route path="/products" exact component={ProductListComponent} />
                         </Switch>
                     </>
