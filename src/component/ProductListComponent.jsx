@@ -48,23 +48,21 @@ class ProductListComponent extends Component {
         }
 
         return (
-            <div class="row">
-                <div class="col-md-9">
-                    <div class="row card-deck">
-                        {products.map(p =>
-                            <div class="col-lg-4 col-md-6 mb-4">
-                                <Card className="text-center">
-                                    <CardHeader tag="h4" className="d-flex align-items-center justify-content-center h-100">{p.name}</CardHeader>
-                                    <CardImg top width="200px" src={p.pictureUrl} alt="" />
-                                    <CardBody>
-                                        <CardTitle tag="h5">{p.price}</CardTitle>
-                                        <Button color="primary">Add To Cart</Button>
-                                    </CardBody>
-                                </Card>
-                            </div>
-                        )}
-                        {!products || products.length === 0 ? <p>No Products!</p> : null}
-                    </div>
+            <div class="col-md-9">
+                <div class="row card-deck">
+                    {products.map(p =>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <Card className="text-center">
+                                <CardHeader tag="h4" className="d-flex align-items-center justify-content-center h-100">{p.name}</CardHeader>
+                                <CardImg top width="200px" src={p.pictureUrl} alt="" />
+                                <CardBody>
+                                    <CardTitle tag="h5">{p.price}</CardTitle>
+                                    <Button color="primary">Add To Cart</Button>
+                                </CardBody>
+                            </Card>
+                        </div>
+                    )}
+                    {!products || products.length === 0 ? <p>No Products!</p> : null}
                 </div>
             </div>
         )
